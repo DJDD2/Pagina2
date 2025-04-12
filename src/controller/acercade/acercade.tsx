@@ -1,5 +1,5 @@
-import { Box, Typography, styled, Grid } from "@mui/material";
-import React from "react";
+
+import { Box, Typography, styled } from "@mui/material";
 
 // Estilos necesarios
 const Container = styled(Box)({
@@ -7,8 +7,9 @@ const Container = styled(Box)({
   backgroundColor: "#f0f0f0",
   minHeight: "80vh",
 });
+
 const StyledMainImage = styled("img")({
-  width: "700px",  // Tamaño específico
+  width: "700px",
   height: "auto",
   borderRadius: "10px",
 });
@@ -41,8 +42,6 @@ const SectionHeader = styled(Typography)({
   fontSize: "1.5rem",
   marginBottom: "20px",
 });
-
-// Removed duplicate declaration of StyledMainImage
 
 const CenteredImageBox = styled(Box)({
   display: "flex",
@@ -90,9 +89,11 @@ export default function AcercaDe() {
       </Header>
 
       <SectionHeader>🏠 Laboratorio de Metalugia</SectionHeader>
+
       <CenteredImageBox>
-        <StyledMainImage src="images/placa.jpg" alt="ImagenTec"  />
+        <StyledMainImage src="images/placa.jpg" alt="ImagenTec" />
       </CenteredImageBox>
+
       <Title>🔧 Cambios en el Laboratorio</Title>
 
       <SubTitle>🛠️ Mantenimiento</SubTitle>
@@ -120,40 +121,37 @@ export default function AcercaDe() {
       <Text>En 2016 se obtuvo la acreditación ABET, lo cual implicó adecuaciones importantes al laboratorio.</Text>
 
       <SubTitle>🖼️ Galería AREA DE TRABAJO </SubTitle>
-      <Text></Text>
 
-      {/* Grid de imágenes */}
-      <Grid container spacing={2} justifyContent="center">
-        <Grid item xs={12} sm={6} md={4}>
-          <Box sx={{ backgroundColor: "#ddd", height: "200px", textAlign: "center" }}>
-            <ImageStyled src="images/areas.jpg" alt="Área de Trabajo" />
+      {/* Galería con Flexbox */}
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          gap: 2,
+          mt: 2,
+        }}
+      >
+        {[
+          { src: "images/areas.jpg", alt: "Área de Trabajo" },
+          { src: "images/1.jpg", alt: "Molino Laminador" },
+          { src: "images/2.jpg", alt: "Área de Muflas" },
+          { src: "images/3.jpg", alt: "Molino Laminador" },
+          { src: "images/4.jpg", alt: "Área de Muflas" },
+        ].map((img, index) => (
+          <Box
+            key={index}
+            sx={{
+              backgroundColor: "#ddd",
+              width: { xs: "100%", sm: "48%", md: "30%" },
+              height: "200px",
+              textAlign: "center",
+            }}
+          >
+            <ImageStyled src={img.src} alt={img.alt} />
           </Box>
-        </Grid>
-
-        <Grid item xs={12} sm={6} md={4}>
-          <Box sx={{ backgroundColor: "#ddd", height: "200px", textAlign: "center" }}>
-            <ImageStyled src="images/1.jpg" alt="Molino Laminador" />
-          </Box>
-        </Grid>
-
-        <Grid item xs={12} sm={6} md={4}>
-          <Box sx={{ backgroundColor: "#ddd", height: "200px", textAlign: "center" }}>
-            <ImageStyled src="images/2.jpg" alt="Área de Muflas" />
-          </Box>
-        </Grid>
-
-        <Grid item xs={12} sm={6} md={4}>
-          <Box sx={{ backgroundColor: "#ddd", height: "200px", textAlign: "center" }}>
-            <ImageStyled src="images/3.jpg" alt="Molino Laminador" />
-          </Box>
-        </Grid>
-
-        <Grid item xs={12} sm={6} md={4}>
-          <Box sx={{ backgroundColor: "#ddd", height: "200px", textAlign: "center" }}>
-            <ImageStyled src="images/4.jpg" alt="Área de Muflas" />
-          </Box>
-        </Grid>
-      </Grid>
+        ))}
+      </Box>
     </Container>
   );
 }

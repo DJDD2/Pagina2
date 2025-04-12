@@ -1,4 +1,4 @@
-import { lazy } from "react";
+
 import "./Home.css";
 
 const Laboratorio: React.FC = () => {

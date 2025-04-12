@@ -102,15 +102,7 @@ const HistoriaText = styled(Typography)({
   color: "#555",
 });
 
-const Section = styled(Box)({
-  marginTop: "1rem",
-});
 
-const Text = styled(Typography)({
-  fontSize: "1rem",
-  color: "#555",
-  marginTop: "0.5rem",
-});
 
 // Componente principal
 const LaboratorioPage: React.FC = () => {

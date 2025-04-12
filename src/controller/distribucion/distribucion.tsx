@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Box, Typography, styled, Grid } from "@mui/material";
 
 // 🧱 Estilos
@@ -108,14 +108,14 @@ export default function Distribucion() {
 
         <Grid container spacing={2} mt={1}>
           {["fundicion.jpg", "fundicion2.jpg"].map((img, i) => (
-            <Grid item xs={12} sm={6} key={i}>
+            
               <CenteredImageBox>
                 <ImageStyled src={`./images/${img}`} alt={`Fundición ${i + 1}`} />
                 <Typography align="center" variant="body2" sx={{ color: "#555", marginTop: "0.5rem" }}>
                   Imagen del área de fundición
                 </Typography>
               </CenteredImageBox>
-            </Grid>
+            
           ))}
         </Grid>
       </MachineBox>

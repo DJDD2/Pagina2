@@ -1,5 +1,5 @@
 import { Box, Typography, styled } from "@mui/material";
-import React from "react";
+
 
 // 🧱 Estilos
 const Container = styled(Box)({

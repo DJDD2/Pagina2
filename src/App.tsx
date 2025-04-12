@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CustomBreadcrumbs from "./components/CustomizedBreadcrumbs";
 import Home from "./controller/home/home"; // ✅ Asegurar que está en `pages/Home.tsx`
-import Laboratorio from "./controller/Laboratorio/laboratorio"; // ✅ Corrected file path
 import Historia from "./controller/historia/historia"; // ✅ Add the correct import for Historia
 import AcercaDe from "./controller/acercade/acercade"; // ✅ Add the correct import for AcercaDe
 import Distribucion from "./controller/distribucion/distribucion";

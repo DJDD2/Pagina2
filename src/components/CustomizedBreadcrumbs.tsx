@@ -4,7 +4,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import StyledBreadcrumb from "./StyledBreadcrumb";
 import Box from "@mui/material/Box";
-import { Typography, styled } from "@mui/material";
+import {  styled } from "@mui/material";
 
 // 🎨 Estilo para el fondo guindo del menú
 const BackgroundContainer = styled(Box)({
@@ -18,13 +18,6 @@ const BackgroundContainer = styled(Box)({
   padding: "20px",
 });
 
-// 🎨 Estilo para el texto adicional
-const AdditionalText = styled(Typography)({
-  color: "#FFFFFF",
-  fontSize: "1.2rem",
-  textAlign: "center",
-  marginTop: "10px",
-});
 
 export default function CustomBreadcrumbs() {
   return (
